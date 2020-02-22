@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		E5CDB87A24012E7A00DD24F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CDB87924012E7A00DD24F9 /* AppDelegate.swift */; };
 		E5CDB87C24012E7A00DD24F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CDB87B24012E7A00DD24F9 /* SceneDelegate.swift */; };
-		E5CDB87E24012E7A00DD24F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CDB87D24012E7A00DD24F9 /* ViewController.swift */; };
+		E5CDB87E24012E7A00DD24F9 /* RobotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CDB87D24012E7A00DD24F9 /* RobotViewController.swift */; };
 		E5CDB88124012E7A00DD24F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5CDB87F24012E7A00DD24F9 /* Main.storyboard */; };
 		E5CDB88324012E7B00DD24F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5CDB88224012E7B00DD24F9 /* Assets.xcassets */; };
 		E5CDB88624012E7B00DD24F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5CDB88424012E7B00DD24F9 /* LaunchScreen.storyboard */; };
@@ -38,7 +38,7 @@
 		E5CDB87624012E7A00DD24F9 /* ToyRobotChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToyRobotChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5CDB87924012E7A00DD24F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5CDB87B24012E7A00DD24F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E5CDB87D24012E7A00DD24F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E5CDB87D24012E7A00DD24F9 /* RobotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotViewController.swift; sourceTree = "<group>"; };
 		E5CDB88024012E7A00DD24F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E5CDB88224012E7B00DD24F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5CDB88524012E7B00DD24F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 			children = (
 				E5CDB87924012E7A00DD24F9 /* AppDelegate.swift */,
 				E5CDB87B24012E7A00DD24F9 /* SceneDelegate.swift */,
-				E5CDB87D24012E7A00DD24F9 /* ViewController.swift */,
+				E5CDB87D24012E7A00DD24F9 /* RobotViewController.swift */,
 				E5CDB87F24012E7A00DD24F9 /* Main.storyboard */,
 				E5CDB88224012E7B00DD24F9 /* Assets.xcassets */,
 				E5CDB88424012E7B00DD24F9 /* LaunchScreen.storyboard */,
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5CDB87E24012E7A00DD24F9 /* ViewController.swift in Sources */,
+				E5CDB87E24012E7A00DD24F9 /* RobotViewController.swift in Sources */,
 				E5CDB87A24012E7A00DD24F9 /* AppDelegate.swift in Sources */,
 				E5CDB87C24012E7A00DD24F9 /* SceneDelegate.swift in Sources */,
 			);

@@ -1,11 +1,3 @@
-//
-//  ToyRobotChallengeTests.swift
-//  ToyRobotChallengeTests
-//
-//  Created by Rajan Maharjan on 22/2/20.
-//  Copyright © 2020 Rajan Maharjan. All rights reserved.
-//
-
 import XCTest
 @testable import ToyRobotChallenge
 
