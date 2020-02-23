@@ -2,25 +2,67 @@ import XCTest
 @testable import ToyRobotChallenge
 
 class ToyRobotChallengeTests: XCTestCase {
+    
+    let robot = Robot()
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testRobotFacingNorth() {
+        let expectedOutput = "2 3 NORTH"
+        let robot = Robot()
+        robot.setPosition(xPoint: 0,
+                          yPoint: 2,
+                          direction: .north)
+        
+        robot.processRobotCommand(command: "LMMLMLMMLMM")
+        XCTAssertEqual(expectedOutput, robot.convertRobotPositionToString())
+        
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testRobotFacingEast() {
+        let expectedOutput = "4 0 EAST"
+        robot.setPosition(xPoint: 2,
+                          yPoint: 1,
+                          direction: .east)
+        
+        
+        robot.processRobotCommand(command: "MMRMMRMRRM")
+        
+        let robotCurrentPosition = robot.currentPosition()
+        print(robotCurrentPosition)
+        XCTAssertEqual(expectedOutput, robot.convertRobotPositionToString())
+        
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testRobotFacingWest() {
+        let expectedOutput = "1 4 WEST"
+        robot.setPosition(xPoint: 1,
+                          yPoint: 4,
+                          direction: .south)
+        
+        robot.processRobotCommand(command: "LMLMLMLMR")
+        let robotCurrentPosition = robot.currentPosition()
+        print(robotCurrentPosition)
+        XCTAssertEqual(expectedOutput, robot.convertRobotPositionToString())
+        
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testRobotFacingSouth() {
+        let expectedOutput = "5 5 SOUTH"
+        robot.setPosition(xPoint: 5,
+                          yPoint: 4,
+                          direction: .east)
+        
+        robot.processRobotCommand(command: "LMLMLMLMLMMMRMR")
+        let robotCurrentPosition = robot.currentPosition()
+        print(robotCurrentPosition)
+        XCTAssertEqual(expectedOutput, robot.convertRobotPositionToString())
+        
     }
-
+    
+    func testRobotAvoidFallingFromTable() {
+        let expectedOutput = "4 1 EAST"
+        robot.setPosition(xPoint: 0,
+                          yPoint: 0, direction: .north)
+        robot.processRobotCommand(command: "LMMLMLMMLMRMM")
+        XCTAssertEqual(expectedOutput, robot.convertRobotPositionToString())
+    }
 }
