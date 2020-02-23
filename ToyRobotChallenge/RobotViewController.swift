@@ -23,7 +23,7 @@ final class RobotViewController: UIViewController {
         setupView()
     }
     
-    /// Setup view and basic routine.
+    // Setup view and basic routine.
     private func setupView() {
         textFieldXValue.becomeFirstResponder()
         textFieldXValue.delegate = self
@@ -33,7 +33,7 @@ final class RobotViewController: UIViewController {
     
     // MARK:- Private Functions
     
-    /// Reset robot's input fields such as X, Y, Direction and Command.
+    // Reset robot's input fields such as X, Y, Direction and Command.
     private func resetRobot() {
         textFieldCommand.text = ""
         commandText = ""
@@ -42,7 +42,7 @@ final class RobotViewController: UIViewController {
         textFieldYValue.text = ""
     }
     
-    /// shows alert to get the Robot location.
+    // shows alert to get the Robot location.
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okButton = UIAlertAction(title: "Ok", style: .default, handler: { [weak self] action in
@@ -56,7 +56,7 @@ final class RobotViewController: UIViewController {
     
     // MARK:- Button actions
     
-    /// Done button action which shows Robot's current location for example (1 3 N)
+    // Done button action which shows Robot's current location for example (1 3 N)
     @IBAction func reportButtonAction(_ sender: Any) {
         
         guard let xValue = textFieldXValue.text,
@@ -75,25 +75,25 @@ final class RobotViewController: UIViewController {
                   message: robot.convertRobotPositionToString())
     }
     
-    /// Left button action which performed move command for the Robot.
+    // Left button action which performed move command for the Robot.
     @IBAction func leftButtonAction(_ sender: Any) {
         commandText.append("L")
         textFieldCommand.text = commandText
     }
     
-    /// Right button action which performed move command for the Robot.
+    // Right button action which performed move command for the Robot.
     @IBAction func rightButtonAction(_ sender: Any) {
         commandText.append("R")
         textFieldCommand.text = commandText
     }
     
-    /// Move button action which performed move command for the Robot.
+    // Move button action which performed move command for the Robot.
     @IBAction func moveButtonAction(_ sender: Any) {
         commandText.append("M")
         textFieldCommand.text = commandText
     }
     
-    /// Reset button action which clears robot's input fields such as X, Y, Direction and Command.
+    // Reset button action which clears robot's input fields such as X, Y, Direction and Command.
     @IBAction func resetButtonAction(_ sender: Any?) {
         resetRobot()
     }
