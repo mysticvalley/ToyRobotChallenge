@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E51CCA8624013192001AAB72 /* Robot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51CCA8524013192001AAB72 /* Robot.swift */; };
+		E592530B2401E462005B8AF9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592530A2401E462005B8AF9 /* Constants.swift */; };
 		E5CDB87A24012E7A00DD24F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CDB87924012E7A00DD24F9 /* AppDelegate.swift */; };
 		E5CDB87C24012E7A00DD24F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CDB87B24012E7A00DD24F9 /* SceneDelegate.swift */; };
 		E5CDB87E24012E7A00DD24F9 /* RobotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CDB87D24012E7A00DD24F9 /* RobotViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E51CCA8524013192001AAB72 /* Robot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Robot.swift; sourceTree = "<group>"; };
+		E592530A2401E462005B8AF9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E5CDB87624012E7A00DD24F9 /* ToyRobotChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToyRobotChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5CDB87924012E7A00DD24F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5CDB87B24012E7A00DD24F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E592530C2401E46E005B8AF9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E592530A2401E462005B8AF9 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		E5CDB86D24012E7A00DD24F9 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +111,8 @@
 		E5CDB87824012E7A00DD24F9 /* ToyRobotChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				E592530C2401E46E005B8AF9 /* Helpers */,
+				E5CDB8AA2401304C00DD24F9 /* Models */,
 				E5CDB87924012E7A00DD24F9 /* AppDelegate.swift */,
 				E5CDB87B24012E7A00DD24F9 /* SceneDelegate.swift */,
 				E5CDB87D24012E7A00DD24F9 /* RobotViewController.swift */,
@@ -126,6 +140,14 @@
 				E5CDB89D24012E7C00DD24F9 /* Info.plist */,
 			);
 			path = ToyRobotChallengeUITests;
+			sourceTree = "<group>";
+		};
+		E5CDB8AA2401304C00DD24F9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E51CCA8524013192001AAB72 /* Robot.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +281,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E51CCA8624013192001AAB72 /* Robot.swift in Sources */,
 				E5CDB87E24012E7A00DD24F9 /* RobotViewController.swift in Sources */,
 				E5CDB87A24012E7A00DD24F9 /* AppDelegate.swift in Sources */,
 				E5CDB87C24012E7A00DD24F9 /* SceneDelegate.swift in Sources */,
+				E592530B2401E462005B8AF9 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
