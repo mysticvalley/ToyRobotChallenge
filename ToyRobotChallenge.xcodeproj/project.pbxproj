@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E51CCA8624013192001AAB72 /* Robot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51CCA8524013192001AAB72 /* Robot.swift */; };
+		E58A96EC24077FE300AEE18A /* RobotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58A96EB24077FE300AEE18A /* RobotViewModel.swift */; };
 		E592530B2401E462005B8AF9 /* RobotError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592530A2401E462005B8AF9 /* RobotError.swift */; };
 		E5CDB87A24012E7A00DD24F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CDB87924012E7A00DD24F9 /* AppDelegate.swift */; };
 		E5CDB87C24012E7A00DD24F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CDB87B24012E7A00DD24F9 /* SceneDelegate.swift */; };
@@ -15,7 +16,7 @@
 		E5CDB88124012E7A00DD24F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5CDB87F24012E7A00DD24F9 /* Main.storyboard */; };
 		E5CDB88324012E7B00DD24F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5CDB88224012E7B00DD24F9 /* Assets.xcassets */; };
 		E5CDB88624012E7B00DD24F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5CDB88424012E7B00DD24F9 /* LaunchScreen.storyboard */; };
-		E5CDB89124012E7C00DD24F9 /* ToyRobotChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CDB89024012E7C00DD24F9 /* ToyRobotChallengeTests.swift */; };
+		E5CDB89124012E7C00DD24F9 /* RobotViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CDB89024012E7C00DD24F9 /* RobotViewModelTests.swift */; };
 		E5CDB89C24012E7C00DD24F9 /* ToyRobotChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CDB89B24012E7C00DD24F9 /* ToyRobotChallengeUITests.swift */; };
 		E5DAA5E82404883200973A30 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DAA5E72404883200973A30 /* Board.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		E51CCA8524013192001AAB72 /* Robot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Robot.swift; sourceTree = "<group>"; };
+		E58A96EB24077FE300AEE18A /* RobotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotViewModel.swift; sourceTree = "<group>"; };
 		E592530A2401E462005B8AF9 /* RobotError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotError.swift; sourceTree = "<group>"; };
 		E5CDB87624012E7A00DD24F9 /* ToyRobotChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToyRobotChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5CDB87924012E7A00DD24F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,7 +51,7 @@
 		E5CDB88524012E7B00DD24F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5CDB88724012E7B00DD24F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5CDB88C24012E7C00DD24F9 /* ToyRobotChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToyRobotChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E5CDB89024012E7C00DD24F9 /* ToyRobotChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToyRobotChallengeTests.swift; sourceTree = "<group>"; };
+		E5CDB89024012E7C00DD24F9 /* RobotViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotViewModelTests.swift; sourceTree = "<group>"; };
 		E5CDB89224012E7C00DD24F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5CDB89724012E7C00DD24F9 /* ToyRobotChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToyRobotChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5CDB89B24012E7C00DD24F9 /* ToyRobotChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToyRobotChallengeUITests.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E58A96EA24077FD400AEE18A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E58A96EB24077FE300AEE18A /* RobotViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		E592530C2401E46E005B8AF9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 		E5CDB87824012E7A00DD24F9 /* ToyRobotChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				E58A96EA24077FD400AEE18A /* ViewModels */,
 				E592530C2401E46E005B8AF9 /* Helpers */,
 				E5CDB8AA2401304C00DD24F9 /* Models */,
 				E5CDB87924012E7A00DD24F9 /* AppDelegate.swift */,
@@ -129,7 +140,7 @@
 		E5CDB88F24012E7C00DD24F9 /* ToyRobotChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				E5CDB89024012E7C00DD24F9 /* ToyRobotChallengeTests.swift */,
+				E5CDB89024012E7C00DD24F9 /* RobotViewModelTests.swift */,
 				E5CDB89224012E7C00DD24F9 /* Info.plist */,
 			);
 			path = ToyRobotChallengeTests;
@@ -287,6 +298,7 @@
 				E51CCA8624013192001AAB72 /* Robot.swift in Sources */,
 				E5CDB87E24012E7A00DD24F9 /* RobotViewController.swift in Sources */,
 				E5DAA5E82404883200973A30 /* Board.swift in Sources */,
+				E58A96EC24077FE300AEE18A /* RobotViewModel.swift in Sources */,
 				E5CDB87A24012E7A00DD24F9 /* AppDelegate.swift in Sources */,
 				E5CDB87C24012E7A00DD24F9 /* SceneDelegate.swift in Sources */,
 				E592530B2401E462005B8AF9 /* RobotError.swift in Sources */,
@@ -297,7 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5CDB89124012E7C00DD24F9 /* ToyRobotChallengeTests.swift in Sources */,
+				E5CDB89124012E7C00DD24F9 /* RobotViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

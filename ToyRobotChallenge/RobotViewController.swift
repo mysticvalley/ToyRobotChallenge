@@ -15,8 +15,7 @@ final class RobotViewController: UIViewController {
 
     // MARK: - Private Variables
 
-    private let board = Board(with: 5)
-    private lazy var robot = Robot()
+    private var viewModel = RobotViewModel()
     private var commandText = ""
 
     // MARK: - View Controller life cycle
@@ -66,15 +65,15 @@ final class RobotViewController: UIViewController {
             let rawValueDirection = Direction(rawValue: segmentControlDirection.selectedSegmentIndex + 1),
             let command = textFieldCommand?.text else { return }
 
-        robot.setPosition(xPoint: Int64(xValue) ?? 0,
-                          yPoint: Int64(yValue) ?? 0,
-                          direction: rawValueDirection,
-                          board: board)
-
-        robot.processRobotCommand(command: command)
+        viewModel.setRobotPosition(
+            xValue: Int64(xValue) ?? 0,
+            yValue: Int64(yValue) ?? 0,
+            direction: rawValueDirection
+        )
+        viewModel.processRobotCommand(command: command)
 
         showAlert(title: "Output:",
-                  message: robot.convertRobotPositionToString())
+                  message: viewModel.convertRobotPositionToString())
     }
 
     // Left button action which performed move command for the Robot.
@@ -104,7 +103,7 @@ final class RobotViewController: UIViewController {
 extension RobotViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn _: NSRange,
                    replacementString string: String) -> Bool {
-        let allowedCharSet = NSCharacterSet(charactersIn: board.allowedRegx).inverted
+        let allowedCharSet = NSCharacterSet(charactersIn: viewModel.allowedRegx).inverted
         let compSepByCharInSet = string.components(separatedBy: allowedCharSet)
         let numberFiltered = compSepByCharInSet.joined(separator: "")
         if string == numberFiltered {

@@ -24,13 +24,11 @@ struct RobotPosition {
 final class Robot {
     // MARK: - Private Variables
 
-    private var xPoint: Int64 = 0
-    private var yPoint: Int64 = 0
-    private lazy var direction: Direction = {
+    var xPoint: Int64 = 0
+    var yPoint: Int64 = 0
+    private(set) lazy var direction: Direction = {
         .north
     }()
-
-    private var board: Board!
 
     // MARK: - Public Functions
 
@@ -38,11 +36,10 @@ final class Robot {
      * setPosition is to set X, Y and direction of the Robot.
      * @param xPoint, yPoint, direction.
      */
-    public func setPosition(xPoint: Int64, yPoint: Int64, direction: Direction, board: Board) {
+    public func setPosition(xPoint: Int64, yPoint: Int64, direction: Direction) {
         self.xPoint = xPoint
         self.yPoint = yPoint
         self.direction = direction
-        self.board = board
     }
 
     /*
@@ -53,31 +50,10 @@ final class Robot {
         return RobotPosition(xValue: xPoint, yValue: yPoint, direction: direction)
     }
 
-    /*
-     * processRobotCommand will return currentPosition of the Robot.
-     * @param command which is an string for example "LMLMLMLMM"
-     */
-    public func processRobotCommand(command: String) {
-        _ = command.map { processCommand(char: $0) }
-    }
-
     // MARK: - Private Functions
 
-    /*
-     * processCommand will take each character(L, R, M) and performs Left, Right, Move.
-     * @param char which is an character for example "L"
-     */
-    private func processCommand(char: Character) {
-        switch char {
-        case "L": turnLeftCommand()
-        case "R": turnRightCommand()
-        case "M": moveCommand()
-        default: print(RobotError.invalidCommand)
-        }
-    }
-
     // turnLeftCommand command will allow robot to left from it's current position.
-    private func turnLeftCommand() {
+    func turnLeftCommand() {
         if (direction.rawValue - 1) < Direction.north.rawValue {
             direction = .west
         } else {
@@ -87,45 +63,12 @@ final class Robot {
     }
 
     // turnRightCommand command will allow robot to right from it's current position.
-    private func turnRightCommand() {
+    func turnRightCommand() {
         if (direction.rawValue + 1) > Direction.west.rawValue {
             direction = .north
         } else {
             guard let rawValueFacing = Direction(rawValue: direction.rawValue + 1) else { return }
             direction = rawValueFacing
         }
-    }
-
-    // moveCommand will allow robot to move by 1 unit.
-    private func moveCommand() {
-        // Checks for maximum table bound before making move
-        if direction == .north, yPoint != board.size, yPoint >= 0 {
-            yPoint = yPoint + 1
-        } else if direction == .east, xPoint != board.size, xPoint >= 0 {
-            xPoint = xPoint + 1
-        } else if direction == .south, yPoint != 0, yPoint >= 0 {
-            yPoint = yPoint - 1
-        } else if direction == .west, xPoint != 0, xPoint >= 0 {
-            xPoint = xPoint - 1
-        }
-    }
-
-    func convertRobotPositionToString() -> String {
-        let facing: String
-
-        switch currentPosition().direction {
-        case .north:
-            facing = "NORTH"
-        case .east:
-            facing = "EAST"
-        case .west:
-            facing = "WEST"
-        case .south:
-            facing = "SOUTH"
-        }
-
-        return String(format: "%@ %@ %@", arguments: [currentPosition().xValue.description,
-                                                      currentPosition().yValue.description,
-                                                      facing])
     }
 }
